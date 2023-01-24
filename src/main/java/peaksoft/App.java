@@ -1,7 +1,5 @@
 package peaksoft;
 
-import peaksoft.config.cfg.HibernateConfig;
-import peaksoft.config.model.User;
 import peaksoft.config.service.UserService;
 import peaksoft.config.service.UserServiceImpl;
 
@@ -23,6 +21,8 @@ public class App
         userService.getAllUsers().forEach(System.out::println);
         //clean user table
         userService.cleanUsersTable();
+        //drop user table
+        userService.dropUsersTable();
 
 
 
