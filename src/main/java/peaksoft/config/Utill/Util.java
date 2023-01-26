@@ -14,12 +14,11 @@ import java.util.Properties;
 public class Util {
     // реализуйте настройку соеденения с БД
 
-
     public static Connection getConnection(){
         Connection connection = null;
         try {
             connection = DriverManager.getConnection(
-                    "jdbc:postgresql://localhost:5432/kustan",
+                    "jdbc:postgresql://localhost:5432/file2",
                     "postgres",
                     "postgres"
             );
@@ -32,7 +31,7 @@ public class Util {
     public static SessionFactory getSession(){
         Properties properties = new Properties();
         properties.put(Environment.DRIVER, "org.postgresql.Driver");
-        properties.put(Environment.URL, "jdbc:postgresql://localhost:5432/kustan");
+        properties.put(Environment.URL, "jdbc:postgresql://localhost:5432/file2");
         properties.put(Environment.USER, "postgres");
         properties.put(Environment.PASS, "postgres");
 
